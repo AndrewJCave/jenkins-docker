@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  jenkins:
+    build:
+      context: .
+    image: therealcavey01/jenkins:lts-jdk11
+    ports:
+      - 80:8080
+      - 50000:50000
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
